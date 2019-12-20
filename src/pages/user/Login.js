@@ -13,8 +13,6 @@ import {
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { createForm } from 'rc-form';
 import { connect } from 'react-redux';
-import { login } from '../../services/login';
-import StorageSync,{ getItem } from '../../utils/asyncStorage';
 
 const { width, height } = Dimensions.get('window');
 
@@ -23,18 +21,6 @@ class Login extends Component {
     submitLoading: false,
   };
 
-  componentDidMount() {
-    // const token = getItem('token',(token)=>{
-    //   alert(token)
-    // });
-   const a =  this.getToken();
-  // alert(a)
-  }
-
-  getToken = async ()=>{
-    const token = await StorageSync.get('token')
-    // alert(token)
-  };
 
   onSubmit = (e) => {
     e.preventDefault();
