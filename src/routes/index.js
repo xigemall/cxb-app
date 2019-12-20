@@ -22,7 +22,7 @@ const stackConfig = {
 };
 
 const AuthStackNavigator = createStackNavigator(AuthRoute, {
-  initialRouteName: 'Login',
+  initialRouteName: 'Home',
   ...stackConfig,
 });
 const AppStackNavigator = createStackNavigator(AppRoute, {
